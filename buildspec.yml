@@ -23,7 +23,7 @@ phases:
     commands:
       - docker push $AWS_ECR/$IMAGE_REPO_NAME:latest
       - docker push $AWS_ECR/$IMAGE_REPO_NAME:$IMAGE_TAG
-      - - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $AWS_ECR/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $AWS_ECR/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files:
