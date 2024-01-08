@@ -12,7 +12,6 @@ phases:
     commands:
       - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin $AWS_ECR # ECR 로그인
 
-	# 빌드 명령
   build:
     commands:
       - IMAGE_TAG=$CODEBUILD_BUILD_NUMBER # 이미지 빌드, 
